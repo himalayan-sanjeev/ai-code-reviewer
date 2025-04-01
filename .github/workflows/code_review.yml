@@ -34,7 +34,7 @@ jobs:
         id: gemini_review
         run: |
           # Send the code to Gemini for analysis
-          ruby analyze_with_gemini.rb "${{ steps.pr_code.outputs.pr_files }}"
+          ruby code_analyzer.rb "${{ steps.pr_code.outputs.pr_files }}"
 
       - name: Post review comment on PR
         run: |
